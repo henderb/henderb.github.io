@@ -3,6 +3,10 @@
 
 @import "{{ site.theme }}";
 
+header {
+    background: #2a2400;
+}
+
 #banner {
     background: #001719;
     border: 1px solid #ffffff;
