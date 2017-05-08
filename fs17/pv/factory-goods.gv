@@ -1,6 +1,11 @@
 digraph pv {
     rankdir=LR;
 
+    Wood -> boards
+    Wood -> Wood_Chips
+
+    boards -> pallet
+
     // Blackcap Birdseed
     Millet      -> birdseed
     sunflower   -> birdseed
