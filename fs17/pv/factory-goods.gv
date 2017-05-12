@@ -1,4 +1,4 @@
-digraph pv {
+strict digraph pv {
     rankdir=LR;
 
     // Orchards
