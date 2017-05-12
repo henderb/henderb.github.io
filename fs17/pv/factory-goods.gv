@@ -1,10 +1,56 @@
 digraph pv {
     rankdir=LR;
 
-    Wood -> boards
-    Wood -> Wood_Chips
+    // Orchards
+    Seed        -> Apples
+    Water       -> Apples
+    Manure      -> Apples
+    Compost     -> Apples
+    Pallets     -> Apples
 
-    boards -> pallet
+    Seed        -> Cherries
+    Water       -> Cherries
+    Manure      -> Cherries
+    Compost     -> Cherries
+    Pallets     -> Cherries
+
+    // Greenhouses
+    Water       -> Lettuce
+    Compost     -> Lettuce
+    Pallets     -> Lettuce
+
+    Water       -> Tomatoes
+    Compost     -> Tomatoes
+    Pallets     -> Tomatoes
+
+    Water       -> Cauliflour
+    Compost     -> Cauliflour
+    Pallets     -> Cauliflour
+
+    Water       -> Red_Cabbage
+    Compost     -> Red_Cabbage
+    Pallets     -> Red_Cabbage
+
+    Water       -> Strawberries
+    Compost     -> Strawberries
+    Pallets     -> Strawberries
+
+    Water       -> Raspberries
+    Compost     -> Raspberries
+    Pallets     -> Raspberries
+
+    // Compost Place
+    Manure      -> Compost
+    Fuel        -> Compost
+
+    Grass       -> Compost
+    Fuel        -> Compost
+
+    Other       -> Compost
+    Fuel        -> Compost
+
+    // Pallet Place
+    boards -> Pallets
 
     // Blackcap Birdseed
     Millet      -> birdseed
@@ -34,17 +80,17 @@ digraph pv {
     // Heartland Bread
     coal        -> wheat_bread
     Water       -> wheat_bread
-    pallet      -> wheat_bread
+    Pallets     -> wheat_bread
     wheat_flour -> wheat_bread
 
     coal        -> oat_bread
     Water       -> oat_bread
-    pallet      -> oat_bread
+    Pallets     -> oat_bread
     oat_flour   -> oat_bread
 
     coal        -> rye_bread
     Water       -> rye_bread
-    pallet      -> rye_bread
+    Pallets     -> rye_bread
     rye_flour   -> rye_bread
 
     // Cogent Forest Products
@@ -54,8 +100,10 @@ digraph pv {
     Wood_Chips  -> resin
     coal        -> resin
 
-    Wood_Chips  -> boards
+    Logs        -> boards
+    Logs        -> Wood_Chips
     coal        -> boards
+    coal        -> Wood_Chips
 
     // Sam Adams
     coal        -> Boston_Lager
@@ -65,7 +113,7 @@ digraph pv {
     cranberry   -> Boston_Lager
     Rye         -> Boston_Lager
     Water       -> Boston_Lager
-    pallet      -> Boston_Lager
+    Pallets     -> Boston_Lager
 
     coal        -> Revolutionary_Ale
     Wheat       -> Revolutionary_Ale
@@ -74,7 +122,7 @@ digraph pv {
     cranberry   -> Revolutionary_Ale
     Rye         -> Revolutionary_Ale
     Water       -> Revolutionary_Ale
-    pallet      -> Revolutionary_Ale
+    Pallets     -> Revolutionary_Ale
 
     coal        -> Cranberry_Lambic
     Wheat       -> Cranberry_Lambic
@@ -83,30 +131,30 @@ digraph pv {
     cranberry   -> Cranberry_Lambic
     Rye         -> Cranberry_Lambic
     Water       -> Cranberry_Lambic
-    pallet      -> Cranberry_Lambic
+    Pallets     -> Cranberry_Lambic
 
     // Kellogs
     coal        -> Frosted_Mini_Wheats
     Wheat       -> Frosted_Mini_Wheats
     sugar       -> Frosted_Mini_Wheats
-    pallet      -> Frosted_Mini_Wheats
+    Pallets     -> Frosted_Mini_Wheats
 
     coal        -> Frosted_Flakes
     Corn        -> Frosted_Flakes
     sugar       -> Frosted_Flakes
-    pallet      -> Frosted_Flakes
+    Pallets     -> Frosted_Flakes
 
     coal        -> Rice_Krispies
     rice        -> Rice_Krispies
     sugar       -> Rice_Krispies
-    pallet      -> Rice_Krispies
+    Pallets     -> Rice_Krispies
 
     // Frito Lay
     coal        -> Classic_Chips
     Potatoes    -> Classic_Chips
     Canola      -> Classic_Chips
     salt        -> Classic_Chips
-    pallet      -> Classic_Chips
+    Pallets     -> Classic_Chips
 
     coal        -> Cheddar_and_SC_Chips
     Potatoes    -> Cheddar_and_SC_Chips
@@ -114,7 +162,7 @@ digraph pv {
     salt        -> Cheddar_and_SC_Chips
     cheese      -> Cheddar_and_SC_Chips
     Sour_Cream  -> Cheddar_and_SC_Chips
-    pallet      -> Cheddar_and_SC_Chips
+    Pallets     -> Cheddar_and_SC_Chips
 
     coal        -> SC_and_Onion_Chips
     Potatoes    -> SC_and_Onion_Chips
@@ -122,7 +170,7 @@ digraph pv {
     onion       -> SC_and_Onion_Chips
     salt        -> SC_and_Onion_Chips
     Sour_Cream  -> SC_and_Onion_Chips
-    pallet      -> SC_and_Onion_Chips
+    Pallets     -> SC_and_Onion_Chips
 
     // National Gypsum
     coal        -> drywall
@@ -134,38 +182,38 @@ digraph pv {
     // Pepsi
     coal        -> Pepsi
     sugar       -> Pepsi
-    cherry      -> Pepsi
+    Cherries    -> Pepsi
     orange      -> Pepsi
     Water       -> Pepsi
-    pallet      -> Pepsi
+    Pallets     -> Pepsi
 
     coal        -> Wild_Cherry_Pepsi
     sugar       -> Wild_Cherry_Pepsi
-    cherry      -> Wild_Cherry_Pepsi
+    Cherries    -> Wild_Cherry_Pepsi
     orange      -> Wild_Cherry_Pepsi
     Water       -> Wild_Cherry_Pepsi
-    pallet      -> Wild_Cherry_Pepsi
+    Pallets     -> Wild_Cherry_Pepsi
 
     coal        -> Mountain_Dew
     sugar       -> Mountain_Dew
-    cherry      -> Mountain_Dew
+    Cherries    -> Mountain_Dew
     orange      -> Mountain_Dew
     Water       -> Mountain_Dew
-    pallet      -> Mountain_Dew
+    Pallets     -> Mountain_Dew
 
     coal        -> Slurry
     sugar       -> Slurry
-    cherry      -> Slurry
+    Cherries    -> Slurry
     orange      -> Slurry
     Water       -> Slurry
-    pallet      -> Slurry
+    Pallets     -> Slurry
 
     // F.M. Textile
     cotton      -> textile
     Hemp        -> textile
     coal        -> textile
     Wool        -> textile
-    pallet      -> textile
+    Pallets     -> textile
 
     // User Glue
     resin       -> glue
@@ -174,23 +222,23 @@ digraph pv {
     coal        -> Cherry_Vodka
     Potatoes    -> Cherry_Vodka
     sugar       -> Cherry_Vodka
-    cherry      -> Cherry_Vodka
+    Cherries    -> Cherry_Vodka
     Water       -> Cherry_Vodka
-    pallet      -> Cherry_Vodka
+    Pallets     -> Cherry_Vodka
 
     coal        -> Orange_Vodka
     Potatoes    -> Orange_Vodka
     sugar       -> Orange_Vodka
     cranberry   -> Orange_Vodka
     Water       -> Orange_Vodka
-    pallet      -> Orange_Vodka
+    Pallets     -> Orange_Vodka
 
     coal        -> Cranberry_Vodka
     Potatoes    -> Cranberry_Vodka
     sugar       -> Cranberry_Vodka
     orange      -> Cranberry_Vodka
     Water       -> Cranberry_Vodka
-    pallet      -> Cranberry_Vodka
+    Pallets     -> Cranberry_Vodka
 
     // Silk Soymilk
     coal        -> Soy_Milk
@@ -198,7 +246,7 @@ digraph pv {
     calcium_carbonate -> Soy_Milk
     Water       -> Soy_Milk
     Fuel        -> Soy_Milk
-    pallet      -> Soy_Milk
+    Pallets     -> Soy_Milk
 
     // Shell Fuel
     Sorghum     -> Fuel
