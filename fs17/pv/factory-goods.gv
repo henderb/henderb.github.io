@@ -74,8 +74,16 @@ digraph pv {
     Sand        -> Concrete
     Gravel      -> Concrete
     Water       -> Concrete
-    Fuel        -> Concrete
+
+    Sand        -> Concrete
+    Gravel      -> Concrete
+    Water       -> Concrete
     coal        -> Concrete
+
+    Sand        -> Concrete
+    Gravel      -> Concrete
+    Water       -> Concrete
+    Fuel        -> Concrete
 
     // Heartland Bread
     coal        -> wheat_bread
@@ -259,8 +267,6 @@ digraph pv {
     salt        -> cheese
 
     Milk        -> Sour_Cream
-    Water       -> Sour_Cream
-    salt        -> Sour_Cream
 
     // Stone Processing
     stone       -> lime
