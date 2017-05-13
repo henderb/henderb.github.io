@@ -13,7 +13,7 @@ strict digraph pv {
     Pigs        -> Slurry
 
     Corn        -> Pigs
-    Sugar_Beet  -> Pigs
+    Sugar_Beets -> Pigs
     Potatoes    -> Pigs
 
     // Cows
@@ -55,70 +55,59 @@ strict digraph pv {
     // Crops
     Seeds               -> Barley
     Fertilizer          -> Barley
-    Liquid_Fertilizer   -> Barley
 
     Seeds               -> Canola
     Fertilizer          -> Canola
-    Liquid_Fertilizer   -> Canola
 
     Seeds               -> Carrots
     Fertilizer          -> Carrots
-    Liquid_Fertilizer   -> Carrots
 
     Seeds               -> Corn
     Fertilizer          -> Corn
-    Liquid_Fertilizer   -> Corn
 
     Seeds               -> Cotton
     Fertilizer          -> Cotton
-    Liquid_Fertilizer   -> Cotton
 
     Seeds               -> Hemp
     Fertilizer          -> Hemp
-    Liquid_Fertilizer   -> Hemp
 
     Seeds               -> Millet
     Fertilizer          -> Millet
-    Liquid_Fertilizer   -> Millet
 
     Seeds               -> Oats
     Fertilizer          -> Oats
-    Liquid_Fertilizer   -> Oats
+
+    Seeds               -> Onions
+    Fertilizer          -> Onions
 
     Seeds               -> Potatoes
     Fertilizer          -> Potatoes
-    Liquid_Fertilizer   -> Potatoes
 
     Seeds               -> Rice
     Fertilizer          -> Rice
-    Liquid_Fertilizer   -> Rice
 
     Seeds               -> Rye
     Fertilizer          -> Rye
-    Liquid_Fertilizer   -> Rye
 
     Seeds               -> Soybeans
     Fertilizer          -> Soybeans
-    Liquid_Fertilizer   -> Soybeans
 
     Seeds               -> Sorghum
     Fertilizer          -> Sorghum
-    Liquid_Fertilizer   -> Sorghum
 
     Seeds               -> Sugar_Beets
     Fertilizer          -> Sugar_Beets
-    Liquid_Fertilizer   -> Sugar_Beets
+
+    Seeds               -> Sugarcane
+    Fertilizer          -> Sugarcane
 
     Seeds               -> Sunflowers
     Fertilizer          -> Sunflowers
-    Liquid_Fertilizer   -> Sunflowers
 
     Seeds               -> Wheat
     Fertilizer          -> Wheat
-    Liquid_Fertilizer   -> Wheat
 
     // Liquid Fertilizer
-    Fertilizer  -> Liquid_Fertilizer
 
     // Fertilizer
     Silt        -> Fertilizer
@@ -194,7 +183,7 @@ strict digraph pv {
 
     // Sugar Refinery
     Sugar_Beets -> Sugar
-    sugarcane   -> Sugar
+    Sugarcane   -> Sugar
 
     // Hops and Props
     Hemp        -> Hops
@@ -278,7 +267,7 @@ strict digraph pv {
 
     Potatoes    -> SC_and_Onion_Chips
     Canola      -> SC_and_Onion_Chips
-    onion       -> SC_and_Onion_Chips
+    Onions      -> SC_and_Onion_Chips
     salt        -> SC_and_Onion_Chips
     Sour_Cream  -> SC_and_Onion_Chips
     Pallets     -> SC_and_Onion_Chips
@@ -343,7 +332,7 @@ strict digraph pv {
 
     // Shell Fuel
     Sorghum     -> Fuel
-    sugarcane   -> Fuel
+    Sugarcane   -> Fuel
     Corn        -> Fuel
 
     // Borden Dairy
@@ -361,7 +350,7 @@ strict digraph pv {
     // Popcorn Suttons
     Pears       -> Whiskey
     Plums       -> Whiskey
-    sugarcane   -> Whiskey
+    Sugarcane   -> Whiskey
     Corn        -> Whiskey
 
     // Krystal Steel
@@ -380,6 +369,6 @@ strict digraph pv {
     // Delmonte
     Potatoes    -> Canned_Veggies
     Corn        -> Canned_Veggies
-    onion       -> Canned_Veggies
-    Carrot      -> Canned_Veggies
+    Onions      -> Canned_Veggies
+    Carrots     -> Canned_Veggies
 }

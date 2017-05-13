@@ -15,7 +15,7 @@ strict digraph pv {
     Pigs        -> Slurry
 
     Corn        -> Pigs
-    Sugar_Beet  -> Pigs
+    Sugar_Beets -> Pigs
     Potatoes    -> Pigs
 
     // Cows
@@ -88,6 +88,10 @@ strict digraph pv {
     Fertilizer          -> Oats
     Liquid_Fertilizer   -> Oats
 
+    Seeds               -> Onions
+    Fertilizer          -> Onions
+    Liquid_Fertilizer   -> Onions
+
     Seeds               -> Potatoes
     Fertilizer          -> Potatoes
     Liquid_Fertilizer   -> Potatoes
@@ -111,6 +115,10 @@ strict digraph pv {
     Seeds               -> Sugar_Beets
     Fertilizer          -> Sugar_Beets
     Liquid_Fertilizer   -> Sugar_Beets
+
+    Seeds               -> Sugarcane
+    Fertilizer          -> Sugarcane
+    Liquid_Fertilizer   -> Sugarcane
 
     Seeds               -> Sunflowers
     Fertilizer          -> Sunflowers
@@ -210,7 +218,7 @@ strict digraph pv {
 
     // Sugar Refinery
     Sugar_Beets -> Sugar
-    sugarcane   -> Sugar
+    Sugarcane   -> Sugar
 
     // Hops and Props
     Hemp        -> Hops
@@ -320,7 +328,7 @@ strict digraph pv {
     Coal        -> SC_and_Onion_Chips
     Potatoes    -> SC_and_Onion_Chips
     Canola      -> SC_and_Onion_Chips
-    onion       -> SC_and_Onion_Chips
+    Onions      -> SC_and_Onion_Chips
     salt        -> SC_and_Onion_Chips
     Sour_Cream  -> SC_and_Onion_Chips
     Pallets     -> SC_and_Onion_Chips
@@ -403,7 +411,7 @@ strict digraph pv {
 
     // Shell Fuel
     Sorghum     -> Fuel
-    sugarcane   -> Fuel
+    Sugarcane   -> Fuel
     Corn        -> Fuel
 
     // Borden Dairy
@@ -423,7 +431,7 @@ strict digraph pv {
     Water       -> Whiskey
     Pears       -> Whiskey
     Plums       -> Whiskey
-    sugarcane   -> Whiskey
+    Sugarcane   -> Whiskey
     Corn        -> Whiskey
 
     // Krystal Steel
@@ -443,6 +451,6 @@ strict digraph pv {
     // Delmonte
     Potatoes    -> Canned_Veggies
     Corn        -> Canned_Veggies
-    onion       -> Canned_Veggies
-    Carrot      -> Canned_Veggies
+    Onions      -> Canned_Veggies
+    Carrots     -> Canned_Veggies
 }
