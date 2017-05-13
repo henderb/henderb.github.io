@@ -48,6 +48,31 @@ strict digraph pv {
     Corn        -> Seed
     Fertilizer  -> Seed
 
+    // Crops
+    Seed                -> Wheat
+    Fertilizer          -> Wheat
+    Liquid_Fertilizer   -> Wheat
+
+    Seed                -> Barley
+    Fertilizer          -> Barley
+    Liquid_Fertilizer   -> Barley
+
+    Seed                -> Corn
+    Fertilizer          -> Corn
+    Liquid_Fertilizer   -> Corn
+
+    Seed                -> Soybeans
+    Fertilizer          -> Soybeans
+    Liquid_Fertilizer   -> Soybeans
+
+    Seed                -> Sugar_Beets
+    Fertilizer          -> Sugar_Beets
+    Liquid_Fertilizer   -> Sugar_Beets
+
+    Seed                -> Potatoes
+    Fertilizer          -> Potatoes
+    Liquid_Fertilizer   -> Potatoes
+
     // Liquid Fertilizer
     Fertilizer  -> Liquid_Fertilizer
     Water       -> Liquid_Fertilizer
@@ -137,8 +162,8 @@ strict digraph pv {
     Oat     -> oat_flour
 
     // Sugar Refinery
-    Sugar_Beet  -> sugar
-    sugarcane   -> sugar
+    Sugar_Beets -> Sugar
+    sugarcane   -> Sugar
 
     // Hops and Props
     Hemp        -> Hops
@@ -217,17 +242,17 @@ strict digraph pv {
     // Kellogs
     coal        -> Frosted_Mini_Wheats
     Wheat       -> Frosted_Mini_Wheats
-    sugar       -> Frosted_Mini_Wheats
+    Sugar       -> Frosted_Mini_Wheats
     Pallets     -> Frosted_Mini_Wheats
 
     coal        -> Frosted_Flakes
     Corn        -> Frosted_Flakes
-    sugar       -> Frosted_Flakes
+    Sugar       -> Frosted_Flakes
     Pallets     -> Frosted_Flakes
 
     coal        -> Rice_Krispies
     rice        -> Rice_Krispies
-    sugar       -> Rice_Krispies
+    Sugar       -> Rice_Krispies
     Pallets     -> Rice_Krispies
 
     // Frito Lay
@@ -262,28 +287,28 @@ strict digraph pv {
 
     // Pepsi
     coal        -> Pepsi
-    sugar       -> Pepsi
+    Sugar       -> Pepsi
     Cherries    -> Pepsi
     Oranges     -> Pepsi
     Water       -> Pepsi
     Pallets     -> Pepsi
 
     coal        -> Wild_Cherry_Pepsi
-    sugar       -> Wild_Cherry_Pepsi
+    Sugar       -> Wild_Cherry_Pepsi
     Cherries    -> Wild_Cherry_Pepsi
     Oranges     -> Wild_Cherry_Pepsi
     Water       -> Wild_Cherry_Pepsi
     Pallets     -> Wild_Cherry_Pepsi
 
     coal        -> Mountain_Dew
-    sugar       -> Mountain_Dew
+    Sugar       -> Mountain_Dew
     Cherries    -> Mountain_Dew
     Oranges     -> Mountain_Dew
     Water       -> Mountain_Dew
     Pallets     -> Mountain_Dew
 
     coal        -> Slurry
-    sugar       -> Slurry
+    Sugar       -> Slurry
     Cherries    -> Slurry
     Oranges     -> Slurry
     Water       -> Slurry
@@ -302,28 +327,28 @@ strict digraph pv {
     // Smirnoff
     coal        -> Cherry_Vodka
     Potatoes    -> Cherry_Vodka
-    sugar       -> Cherry_Vodka
+    Sugar       -> Cherry_Vodka
     Cherries    -> Cherry_Vodka
     Water       -> Cherry_Vodka
     Pallets     -> Cherry_Vodka
 
     coal        -> Orange_Vodka
     Potatoes    -> Orange_Vodka
-    sugar       -> Orange_Vodka
+    Sugar       -> Orange_Vodka
     cranberry   -> Orange_Vodka
     Water       -> Orange_Vodka
     Pallets     -> Orange_Vodka
 
     coal        -> Cranberry_Vodka
     Potatoes    -> Cranberry_Vodka
-    sugar       -> Cranberry_Vodka
+    Sugar       -> Cranberry_Vodka
     Oranges     -> Cranberry_Vodka
     Water       -> Cranberry_Vodka
     Pallets     -> Cranberry_Vodka
 
     // Silk Soymilk
     coal        -> Soy_Milk
-    soybean     -> Soy_Milk
+    Soybeans    -> Soy_Milk
     calcium_carbonate -> Soy_Milk
     Water       -> Soy_Milk
     Fuel        -> Soy_Milk
