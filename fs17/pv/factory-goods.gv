@@ -1,6 +1,43 @@
 strict digraph pv {
     rankdir=LR;
 
+    // Pigs
+    Wheat       -> Straw
+    Barley      -> Straw
+    Straw       -> Pigs
+    Pigs        -> Manure
+    Pigs        -> Slurry
+
+    Corn        -> Pigs
+    Sugar_Beet  -> Pigs
+    Potatoes    -> Pigs
+
+    // Cows
+    Wheat       -> Straw
+    Barley      -> Straw
+    Straw       -> Cows
+    Cows        -> Manure
+    Cows        -> Slurry
+    Cows        -> Milk
+
+    Grass       -> Cows
+    Grass       -> Hay
+    Hay         -> Cows
+    Silage      -> Cows
+
+    Grass       -> TMR
+    Silage      -> TMR
+    Straw       -> TMR
+    TMR         -> Cows
+
+    // Silage
+    Grass       -> Chaff
+    Corn        -> Chaff
+
+    Chaff       -> Silage
+    Silage      -> Digestate
+    Silage      -> Fuel
+
     // Seed Maker
     Wheat       -> Seed
     Fertilizer  -> Seed
@@ -37,6 +74,18 @@ strict digraph pv {
     Manure      -> Oranges
     Compost     -> Oranges
     Pallets     -> Oranges
+
+    Seed        -> Pears
+    Water       -> Pears
+    Manure      -> Pears
+    Compost     -> Pears
+    Pallets     -> Pears
+
+    Seed        -> Plums
+    Water       -> Plums
+    Manure      -> Plums
+    Compost     -> Plums
+    Pallets     -> Plums
 
     // Greenhouses
     Water       -> Lettuce
@@ -300,8 +349,8 @@ strict digraph pv {
 
     // Popcorn Suttons
     Water       -> Whiskey
-    pear        -> Whiskey
-    plum        -> Whiskey
+    Pears       -> Whiskey
+    Plums       -> Whiskey
     sugarcane   -> Whiskey
     Corn        -> Whiskey
 
