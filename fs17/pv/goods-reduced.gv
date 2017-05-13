@@ -1,44 +1,48 @@
 strict digraph pv {
     rankdir=LR;
 
-    // Sheep
-    Grass       -> Sheep
-    Sheep       -> Wool
+    subgraph animals {
+        label = "Animals"
+        color = blue
+        // Sheep
+        Grass       -> Sheep
+        Sheep       -> Wool
 
-    // Pigs
-    Wheat       -> Straw
-    Barley      -> Straw
-    Straw       -> Pigs
-    Pigs        -> Manure
-    Pigs        -> Slurry
+        // Pigs
+        Wheat       -> Straw
+        Barley      -> Straw
+        Straw       -> Pigs
+        Pigs        -> Manure
+        Pigs        -> Slurry
 
-    Corn        -> Pigs
-    Sugar_Beets -> Pigs
-    Potatoes    -> Pigs
+        Corn        -> Pigs
+        Sugar_Beets -> Pigs
+        Potatoes    -> Pigs
 
-    // Cows
-    Wheat       -> Straw
-    Barley      -> Straw
-    Straw       -> Cows
-    Cows        -> Manure
-    Cows        -> Slurry
-    Cows        -> Milk
+        // Cows
+        Wheat       -> Straw
+        Barley      -> Straw
+        Straw       -> Cows
+        Cows        -> Manure
+        Cows        -> Slurry
+        Cows        -> Milk
 
-    Grass       -> Cows
-    Grass       -> Hay
-    Hay         -> Cows
-    Silage      -> Cows
+        Grass       -> Cows
+        Grass       -> Hay
+        Hay         -> Cows
+        Silage      -> Cows
 
-    Grass       -> TMR
-    Silage      -> TMR
-    Straw       -> TMR
-    TMR         -> Cows
+        Grass       -> TMR
+        Silage      -> TMR
+        Straw       -> TMR
+        TMR         -> Cows
 
-    // Silage
-    Grass       -> Chaff
-    Corn        -> Chaff
+        // Silage
+        Grass       -> Chaff
+        Corn        -> Chaff
 
-    Chaff       -> Silage
+        Chaff       -> Silage
+    }
     Silage      -> Digestate
     Silage      -> Fuel
 
@@ -359,10 +363,12 @@ strict digraph pv {
     Sugarcane   -> Whiskey
     Corn        -> Whiskey
 
-    // Krystal Steel
-    ore         -> steel
-    limestone   -> steel
-    Fuel        -> steel
+    subgraph Steel {
+        label = "Krystal Steel"
+        ore         -> steel
+        limestone   -> steel
+        Fuel        -> steel
+    }
 
     // Furniture Factory
     Wood_Chips  -> Chipboard
@@ -372,9 +378,11 @@ strict digraph pv {
     Wood_Chips  -> Furniture
     Wood        -> Furniture
 
-    // Delmonte
-    Potatoes    -> Canned_Veggies
-    Corn        -> Canned_Veggies
-    Onions      -> Canned_Veggies
-    Carrots     -> Canned_Veggies
+    subgraph Delmonte {
+        label = "Delmonte"
+        Potatoes    -> Canned_Veggies
+        Corn        -> Canned_Veggies
+        Onions      -> Canned_Veggies
+        Carrots     -> Canned_Veggies
+    }
 }
