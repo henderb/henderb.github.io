@@ -1,6 +1,10 @@
 strict digraph pv {
     rankdir=LR;
 
+    // Sheep
+    Grass       -> Sheep
+    Sheep       -> Wool
+
     // Pigs
     Wheat       -> Straw
     Barley      -> Straw
@@ -39,39 +43,79 @@ strict digraph pv {
     Silage      -> Fuel
 
     // Seed Maker
-    Wheat       -> Seed
-    Fertilizer  -> Seed
+    Wheat       -> Seeds
+    Fertilizer  -> Seeds
 
-    Barley      -> Seed
-    Fertilizer  -> Seed
+    Barley      -> Seeds
+    Fertilizer  -> Seeds
 
-    Corn        -> Seed
-    Fertilizer  -> Seed
+    Corn        -> Seeds
+    Fertilizer  -> Seeds
 
     // Crops
-    Seed                -> Wheat
-    Fertilizer          -> Wheat
-    Liquid_Fertilizer   -> Wheat
-
-    Seed                -> Barley
+    Seeds               -> Barley
     Fertilizer          -> Barley
     Liquid_Fertilizer   -> Barley
 
-    Seed                -> Corn
+    Seeds               -> Canola
+    Fertilizer          -> Canola
+    Liquid_Fertilizer   -> Canola
+
+    Seeds               -> Carrots
+    Fertilizer          -> Carrots
+    Liquid_Fertilizer   -> Carrots
+
+    Seeds               -> Corn
     Fertilizer          -> Corn
     Liquid_Fertilizer   -> Corn
 
-    Seed                -> Soybeans
+    Seeds               -> Cotton
+    Fertilizer          -> Cotton
+    Liquid_Fertilizer   -> Cotton
+
+    Seeds               -> Hemp
+    Fertilizer          -> Hemp
+    Liquid_Fertilizer   -> Hemp
+
+    Seeds               -> Millet
+    Fertilizer          -> Millet
+    Liquid_Fertilizer   -> Millet
+
+    Seeds               -> Oats
+    Fertilizer          -> Oats
+    Liquid_Fertilizer   -> Oats
+
+    Seeds               -> Potatoes
+    Fertilizer          -> Potatoes
+    Liquid_Fertilizer   -> Potatoes
+
+    Seeds               -> Rice
+    Fertilizer          -> Rice
+    Liquid_Fertilizer   -> Rice
+
+    Seeds               -> Rye
+    Fertilizer          -> Rye
+    Liquid_Fertilizer   -> Rye
+
+    Seeds               -> Soybeans
     Fertilizer          -> Soybeans
     Liquid_Fertilizer   -> Soybeans
 
-    Seed                -> Sugar_Beets
+    Seeds               -> Sorghum
+    Fertilizer          -> Sorghum
+    Liquid_Fertilizer   -> Sorghum
+
+    Seeds               -> Sugar_Beets
     Fertilizer          -> Sugar_Beets
     Liquid_Fertilizer   -> Sugar_Beets
 
-    Seed                -> Potatoes
-    Fertilizer          -> Potatoes
-    Liquid_Fertilizer   -> Potatoes
+    Seeds               -> Sunflowers
+    Fertilizer          -> Sunflowers
+    Liquid_Fertilizer   -> Sunflowers
+
+    Seeds               -> Wheat
+    Fertilizer          -> Wheat
+    Liquid_Fertilizer   -> Wheat
 
     // Liquid Fertilizer
     Fertilizer  -> Liquid_Fertilizer
@@ -81,27 +125,27 @@ strict digraph pv {
     Digestate   -> Fertilizer
 
     // Orchards
-    Seed        -> Apples
+    Seeds       -> Apples
     Manure      -> Apples
     Compost     -> Apples
     Pallets     -> Apples
 
-    Seed        -> Cherries
+    Seeds       -> Cherries
     Manure      -> Cherries
     Compost     -> Cherries
     Pallets     -> Cherries
 
-    Seed        -> Oranges
+    Seeds       -> Oranges
     Manure      -> Oranges
     Compost     -> Oranges
     Pallets     -> Oranges
 
-    Seed        -> Pears
+    Seeds       -> Pears
     Manure      -> Pears
     Compost     -> Pears
     Pallets     -> Pears
 
-    Seed        -> Plums
+    Seeds       -> Plums
     Manure      -> Plums
     Compost     -> Plums
     Pallets     -> Plums
@@ -140,13 +184,13 @@ strict digraph pv {
 
     // Blackcap Birdseed
     Millet      -> birdseed
-    sunflower   -> birdseed
+    Sunflowers  -> birdseed
     Corn        -> birdseed
 
     // Grain Mill
     Wheat   -> wheat_flour
     Rye     -> rye_flour
-    Oat     -> oat_flour
+    Oats    -> oat_flour
 
     // Sugar Refinery
     Sugar_Beets -> Sugar
@@ -215,7 +259,7 @@ strict digraph pv {
     Sugar       -> Frosted_Flakes
     Pallets     -> Frosted_Flakes
 
-    rice        -> Rice_Krispies
+    Rice        -> Rice_Krispies
     Sugar       -> Rice_Krispies
     Pallets     -> Rice_Krispies
 
@@ -267,7 +311,7 @@ strict digraph pv {
     Pallets     -> Slurry
 
     // F.M. Textile
-    cotton      -> textile
+    Cotton      -> textile
     Hemp        -> textile
     Wool        -> textile
     Pallets     -> textile
