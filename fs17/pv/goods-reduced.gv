@@ -68,8 +68,14 @@ strict digraph pv {
     Seeds               -> Cotton
     Fertilizer          -> Cotton
 
+    Seeds               -> Cranberries
+    Fertilizer          -> Cranberries
+
     Seeds               -> Hemp
     Fertilizer          -> Hemp
+
+    Seeds               -> Lavender
+    Fertilizer          -> Lavender
 
     Seeds               -> Millet
     Fertilizer          -> Millet
@@ -221,21 +227,21 @@ strict digraph pv {
     Wheat       -> Boston_Lager
     Barley      -> Boston_Lager
     Hops        -> Boston_Lager
-    cranberry   -> Boston_Lager
+    Cranberries -> Boston_Lager
     Rye         -> Boston_Lager
     Pallets     -> Boston_Lager
 
     Wheat       -> Revolutionary_Ale
     Barley      -> Revolutionary_Ale
     Hops        -> Revolutionary_Ale
-    cranberry   -> Revolutionary_Ale
+    Cranberries -> Revolutionary_Ale
     Rye         -> Revolutionary_Ale
     Pallets     -> Revolutionary_Ale
 
     Wheat       -> Cranberry_Lambic
     Barley      -> Cranberry_Lambic
     Hops        -> Cranberry_Lambic
-    cranberry   -> Cranberry_Lambic
+    Cranberries -> Cranberry_Lambic
     Rye         -> Cranberry_Lambic
     Pallets     -> Cranberry_Lambic
 
@@ -316,7 +322,7 @@ strict digraph pv {
 
     Potatoes    -> Orange_Vodka
     Sugar       -> Orange_Vodka
-    cranberry   -> Orange_Vodka
+    Cranberries -> Orange_Vodka
     Pallets     -> Orange_Vodka
 
     Potatoes    -> Cranberry_Vodka
