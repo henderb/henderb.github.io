@@ -1,0 +1,376 @@
+strict digraph pv {
+    rankdir=LR;
+
+    // Pigs
+    Wheat       -> Straw
+    Barley      -> Straw
+    Straw       -> Pigs
+    Pigs        -> Manure
+    Pigs        -> Slurry
+
+    Corn        -> Pigs
+    Sugar_Beet  -> Pigs
+    Potatoes    -> Pigs
+
+    // Cows
+    Wheat       -> Straw
+    Barley      -> Straw
+    Straw       -> Cows
+    Cows        -> Manure
+    Cows        -> Slurry
+    Cows        -> Milk
+
+    Grass       -> Cows
+    Grass       -> Hay
+    Hay         -> Cows
+    Silage      -> Cows
+
+    Grass       -> TMR
+    Silage      -> TMR
+    Straw       -> TMR
+    TMR         -> Cows
+
+    // Silage
+    Grass       -> Chaff
+    Corn        -> Chaff
+
+    Chaff       -> Silage
+    Silage      -> Digestate
+    Silage      -> Fuel
+
+    // Seed Maker
+    Wheat       -> Seed
+    Fertilizer  -> Seed
+
+    Barley      -> Seed
+    Fertilizer  -> Seed
+
+    Corn        -> Seed
+    Fertilizer  -> Seed
+
+    // Liquid Fertilizer
+    Fertilizer  -> Liquid_Fertilizer
+    Water       -> Liquid_Fertilizer
+
+    // Fertilizer
+    Silt        -> Fertilizer
+    Digestate   -> Fertilizer
+
+    // Orchards
+    Seed        -> Apples
+    Water       -> Apples
+    Manure      -> Apples
+    Compost     -> Apples
+    Pallets     -> Apples
+
+    Seed        -> Cherries
+    Water       -> Cherries
+    Manure      -> Cherries
+    Compost     -> Cherries
+    Pallets     -> Cherries
+
+    Seed        -> Oranges
+    Water       -> Oranges
+    Manure      -> Oranges
+    Compost     -> Oranges
+    Pallets     -> Oranges
+
+    Seed        -> Pears
+    Water       -> Pears
+    Manure      -> Pears
+    Compost     -> Pears
+    Pallets     -> Pears
+
+    Seed        -> Plums
+    Water       -> Plums
+    Manure      -> Plums
+    Compost     -> Plums
+    Pallets     -> Plums
+
+    // Greenhouses
+    Water       -> Lettuce
+    Compost     -> Lettuce
+    Pallets     -> Lettuce
+
+    Water       -> Tomatoes
+    Compost     -> Tomatoes
+    Pallets     -> Tomatoes
+
+    Water       -> Cauliflour
+    Compost     -> Cauliflour
+    Pallets     -> Cauliflour
+
+    Water       -> Red_Cabbage
+    Compost     -> Red_Cabbage
+    Pallets     -> Red_Cabbage
+
+    Water       -> Strawberries
+    Compost     -> Strawberries
+    Pallets     -> Strawberries
+
+    Water       -> Raspberries
+    Compost     -> Raspberries
+    Pallets     -> Raspberries
+
+    // Compost Place
+    Manure      -> Compost
+    Fuel        -> Compost
+
+    Grass       -> Compost
+    Fuel        -> Compost
+
+    Other       -> Compost
+    Fuel        -> Compost
+
+    // Pallet Place
+    boards -> Pallets
+
+    // Blackcap Birdseed
+    Millet      -> birdseed
+    sunflower   -> birdseed
+    Corn        -> birdseed
+    coal        -> birdseed
+
+    // Grain Mill
+    Wheat   -> wheat_flour
+    Rye     -> rye_flour
+    Oat     -> oat_flour
+
+    // Sugar Refinery
+    Sugar_Beet  -> sugar
+    sugarcane   -> sugar
+
+    // Hops and Props
+    Hemp        -> Hops
+
+    // Pjevs Concrete
+    Sand        -> Concrete
+    Gravel      -> Concrete
+    Water       -> Concrete
+
+    Sand        -> Concrete
+    Gravel      -> Concrete
+    Water       -> Concrete
+    coal        -> Concrete
+
+    Sand        -> Concrete
+    Gravel      -> Concrete
+    Water       -> Concrete
+    Fuel        -> Concrete
+
+    // Heartland Bread
+    coal        -> wheat_bread
+    Water       -> wheat_bread
+    Pallets     -> wheat_bread
+    wheat_flour -> wheat_bread
+
+    coal        -> oat_bread
+    Water       -> oat_bread
+    Pallets     -> oat_bread
+    oat_flour   -> oat_bread
+
+    coal        -> rye_bread
+    Water       -> rye_bread
+    Pallets     -> rye_bread
+    rye_flour   -> rye_bread
+
+    // Cogent Forest Products
+    Wood_Chips  -> paper
+    coal        -> paper
+
+    Wood_Chips  -> resin
+    coal        -> resin
+
+    Logs        -> boards
+    Logs        -> Wood_Chips
+    coal        -> boards
+    coal        -> Wood_Chips
+
+    // Sam Adams
+    coal        -> Boston_Lager
+    Wheat       -> Boston_Lager
+    Barley      -> Boston_Lager
+    Hops        -> Boston_Lager
+    cranberry   -> Boston_Lager
+    Rye         -> Boston_Lager
+    Water       -> Boston_Lager
+    Pallets     -> Boston_Lager
+
+    coal        -> Revolutionary_Ale
+    Wheat       -> Revolutionary_Ale
+    Barley      -> Revolutionary_Ale
+    Hops        -> Revolutionary_Ale
+    cranberry   -> Revolutionary_Ale
+    Rye         -> Revolutionary_Ale
+    Water       -> Revolutionary_Ale
+    Pallets     -> Revolutionary_Ale
+
+    coal        -> Cranberry_Lambic
+    Wheat       -> Cranberry_Lambic
+    Barley      -> Cranberry_Lambic
+    Hops        -> Cranberry_Lambic
+    cranberry   -> Cranberry_Lambic
+    Rye         -> Cranberry_Lambic
+    Water       -> Cranberry_Lambic
+    Pallets     -> Cranberry_Lambic
+
+    // Kellogs
+    coal        -> Frosted_Mini_Wheats
+    Wheat       -> Frosted_Mini_Wheats
+    sugar       -> Frosted_Mini_Wheats
+    Pallets     -> Frosted_Mini_Wheats
+
+    coal        -> Frosted_Flakes
+    Corn        -> Frosted_Flakes
+    sugar       -> Frosted_Flakes
+    Pallets     -> Frosted_Flakes
+
+    coal        -> Rice_Krispies
+    rice        -> Rice_Krispies
+    sugar       -> Rice_Krispies
+    Pallets     -> Rice_Krispies
+
+    // Frito Lay
+    coal        -> Classic_Chips
+    Potatoes    -> Classic_Chips
+    Canola      -> Classic_Chips
+    salt        -> Classic_Chips
+    Pallets     -> Classic_Chips
+
+    coal        -> Cheddar_and_SC_Chips
+    Potatoes    -> Cheddar_and_SC_Chips
+    Canola      -> Cheddar_and_SC_Chips
+    salt        -> Cheddar_and_SC_Chips
+    cheese      -> Cheddar_and_SC_Chips
+    Sour_Cream  -> Cheddar_and_SC_Chips
+    Pallets     -> Cheddar_and_SC_Chips
+
+    coal        -> SC_and_Onion_Chips
+    Potatoes    -> SC_and_Onion_Chips
+    Canola      -> SC_and_Onion_Chips
+    onion       -> SC_and_Onion_Chips
+    salt        -> SC_and_Onion_Chips
+    Sour_Cream  -> SC_and_Onion_Chips
+    Pallets     -> SC_and_Onion_Chips
+
+    // National Gypsum
+    coal        -> drywall
+    glue        -> drywall
+    paper       -> drywall
+    gypsum      -> drywall
+    Fuel        -> drywall
+
+    // Pepsi
+    coal        -> Pepsi
+    sugar       -> Pepsi
+    Cherries    -> Pepsi
+    Oranges     -> Pepsi
+    Water       -> Pepsi
+    Pallets     -> Pepsi
+
+    coal        -> Wild_Cherry_Pepsi
+    sugar       -> Wild_Cherry_Pepsi
+    Cherries    -> Wild_Cherry_Pepsi
+    Oranges     -> Wild_Cherry_Pepsi
+    Water       -> Wild_Cherry_Pepsi
+    Pallets     -> Wild_Cherry_Pepsi
+
+    coal        -> Mountain_Dew
+    sugar       -> Mountain_Dew
+    Cherries    -> Mountain_Dew
+    Oranges     -> Mountain_Dew
+    Water       -> Mountain_Dew
+    Pallets     -> Mountain_Dew
+
+    coal        -> Slurry
+    sugar       -> Slurry
+    Cherries    -> Slurry
+    Oranges     -> Slurry
+    Water       -> Slurry
+    Pallets     -> Slurry
+
+    // F.M. Textile
+    cotton      -> textile
+    Hemp        -> textile
+    coal        -> textile
+    Wool        -> textile
+    Pallets     -> textile
+
+    // User Glue
+    resin       -> glue
+
+    // Smirnoff
+    coal        -> Cherry_Vodka
+    Potatoes    -> Cherry_Vodka
+    sugar       -> Cherry_Vodka
+    Cherries    -> Cherry_Vodka
+    Water       -> Cherry_Vodka
+    Pallets     -> Cherry_Vodka
+
+    coal        -> Orange_Vodka
+    Potatoes    -> Orange_Vodka
+    sugar       -> Orange_Vodka
+    cranberry   -> Orange_Vodka
+    Water       -> Orange_Vodka
+    Pallets     -> Orange_Vodka
+
+    coal        -> Cranberry_Vodka
+    Potatoes    -> Cranberry_Vodka
+    sugar       -> Cranberry_Vodka
+    Oranges     -> Cranberry_Vodka
+    Water       -> Cranberry_Vodka
+    Pallets     -> Cranberry_Vodka
+
+    // Silk Soymilk
+    coal        -> Soy_Milk
+    soybean     -> Soy_Milk
+    calcium_carbonate -> Soy_Milk
+    Water       -> Soy_Milk
+    Fuel        -> Soy_Milk
+    Pallets     -> Soy_Milk
+
+    // Shell Fuel
+    Sorghum     -> Fuel
+    sugarcane   -> Fuel
+    Corn        -> Fuel
+
+    // Borden Dairy
+    Milk        -> cheese
+    Water       -> cheese
+    salt        -> cheese
+
+    Milk        -> Sour_Cream
+
+    // Stone Processing
+    stone       -> lime
+    stone       -> limestone
+    stone       -> calcium_carbonate
+    stone       -> gypsum
+
+    // Popcorn Suttons
+    Water       -> Whiskey
+    Pears       -> Whiskey
+    Plums       -> Whiskey
+    sugarcane   -> Whiskey
+    Corn        -> Whiskey
+
+    // Krystal Steel
+    ore         -> steel
+    limestone   -> steel
+    coal        -> steel
+    Fuel        -> steel
+
+    // Furniture Factory
+    Wood_Chips  -> Chipboard
+
+    Wood        -> Timber
+
+    Wood_Chips  -> Furniture
+    Wood        -> Furniture
+
+    // Delmonte
+    Potatoes    -> Canned_Veggies
+    Corn        -> Canned_Veggies
+    onion       -> Canned_Veggies
+    Carrot      -> Canned_Veggies
+}

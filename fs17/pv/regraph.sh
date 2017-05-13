@@ -1,5 +1,7 @@
 #!/bin/bash
 
-dot -Tpng factory-goods-reduced.gv > factory-goods-reduced.png
-dot -Tpng factory-goods.gv > factory-goods.png
+dot -Tpng goods.gv > goods.png
+
+cat goods.gv | sed '/Water|coal/d' > goods-reduced.gv
+dot -Tpng goods-reduced.gv > goods-reduced.png
 
