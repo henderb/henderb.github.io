@@ -1,6 +1,24 @@
 strict digraph pv {
     rankdir=LR;
 
+    // Seed Maker
+    Wheat       -> Seed
+    Fertilizer  -> Seed
+
+    Barley      -> Seed
+    Fertilizer  -> Seed
+
+    Corn        -> Seed
+    Fertilizer  -> Seed
+
+    // Liquid Fertilizer
+    Fertilizer  -> Liquid_Fertilizer
+    Water       -> Liquid_Fertilizer
+
+    // Fertilizer
+    Silt        -> Fertilizer
+    Digestate   -> Fertilizer
+
     // Orchards
     Seed        -> Apples
     Water       -> Apples
@@ -13,6 +31,12 @@ strict digraph pv {
     Manure      -> Cherries
     Compost     -> Cherries
     Pallets     -> Cherries
+
+    Seed        -> Oranges
+    Water       -> Oranges
+    Manure      -> Oranges
+    Compost     -> Oranges
+    Pallets     -> Oranges
 
     // Greenhouses
     Water       -> Lettuce
@@ -191,28 +215,28 @@ strict digraph pv {
     coal        -> Pepsi
     sugar       -> Pepsi
     Cherries    -> Pepsi
-    orange      -> Pepsi
+    Oranges     -> Pepsi
     Water       -> Pepsi
     Pallets     -> Pepsi
 
     coal        -> Wild_Cherry_Pepsi
     sugar       -> Wild_Cherry_Pepsi
     Cherries    -> Wild_Cherry_Pepsi
-    orange      -> Wild_Cherry_Pepsi
+    Oranges     -> Wild_Cherry_Pepsi
     Water       -> Wild_Cherry_Pepsi
     Pallets     -> Wild_Cherry_Pepsi
 
     coal        -> Mountain_Dew
     sugar       -> Mountain_Dew
     Cherries    -> Mountain_Dew
-    orange      -> Mountain_Dew
+    Oranges     -> Mountain_Dew
     Water       -> Mountain_Dew
     Pallets     -> Mountain_Dew
 
     coal        -> Slurry
     sugar       -> Slurry
     Cherries    -> Slurry
-    orange      -> Slurry
+    Oranges     -> Slurry
     Water       -> Slurry
     Pallets     -> Slurry
 
@@ -244,7 +268,7 @@ strict digraph pv {
     coal        -> Cranberry_Vodka
     Potatoes    -> Cranberry_Vodka
     sugar       -> Cranberry_Vodka
-    orange      -> Cranberry_Vodka
+    Oranges     -> Cranberry_Vodka
     Water       -> Cranberry_Vodka
     Pallets     -> Cranberry_Vodka
 
