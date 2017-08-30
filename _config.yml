@@ -1,2 +1,5 @@
 theme: jekyll-theme-leap-day
 title: henderb.net
+prose:
+	siteurl: "http://henderb.net"
+    
